@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+5.times do |i|
+  b = Blog.create(title: "blog #{i}")
+  Random.rand(1...4).times do |j|
+    b.entries.create(name: "entry #{j}", body: "body #{j}")
+  end
+end
