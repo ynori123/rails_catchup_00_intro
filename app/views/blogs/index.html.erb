@@ -5,6 +5,9 @@
 <div id="blogs">
   <% @blogs.each do |blog| %>
     <%= render blog %>
+    <ul>
+      <%= render partial: "entry", collection: blog.entries, as: :entry %>
+    </ul>
     <p>
       <%= link_to "Show this blog", blog %>
     </p>
